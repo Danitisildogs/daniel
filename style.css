@@ -1,34 +1,153 @@
-body {
-    background-color: rgb(233, 233, 233);
-    font-family: Arial, sans-serif;
+/* Reset básico para remover margens e espaçamentos padrão */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
+body {
+    background-color: rgb(233, 233, 233);
+    font-family: 'Roboto', Arial, sans-serif; /* Uma fonte mais moderna e legível */
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Estilo do cabeçalho */
 header {
     background-color: #700cb3;
-    padding: 10px;
+    padding: 20px 0; /* Mais espaçamento para um visual mais "arejado" */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil para destacar o cabeçalho */
 }
 
+/* Menu de navegação */
 .navbar {
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 15px;
+    gap: 30px; /* Mais espaço entre os links para maior clareza */
     padding: 0;
 }
 
 .nav-links a {
-    color: rgb(255, 255, 255);
+    color: #fff;
     text-decoration: none;
+    font-size: 18px; /* Aumentando o tamanho da fonte */
+    text-transform: uppercase; /* Deixa o texto todo em maiúsculas para um visual mais elegante */
+    font-weight: bold;
+    transition: color 0.3s ease; /* Animação suave ao passar o mouse */
 }
 
+.nav-links a:hover {
+    color: #d4d4d4; /* Mudança de cor sutil ao passar o mouse */
+}
+
+/* Estilos gerais do corpo principal */
 main {
-    padding: 20px;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto; /* Centraliza o conteúdo e ajusta à tela */
     text-align: center;
-    color: #700cb3;
+    color: #333; /* Texto escuro para boa legibilidade */
+}
+
+h1, h2 {
+    color: #700cb3; /* Mantendo a cor roxa nos títulos */
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-top: 30px;
+}
+
+p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    color: #555; /* Cor secundária para os parágrafos */
+}
+
+/* Formatação do formulário de contato */
+form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Sombra para destacar o formulário */
+    max-width: 600px;
+    margin: 20px auto; /* Centralizando o formulário */
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+form input:focus, form textarea:focus {
+    outline: none;
+    border-color: #700cb3; /* Cor roxa nos campos ao focar */
+    box-shadow: 0 0 5px rgba(112, 12, 179, 0.3); /* Efeito de foco suave */
+}
+
+button {
+    background-color: #700cb3;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #5e0994; /* Escurece um pouco o botão ao passar o mouse */
+}
+
+/* Estilo do rodapé */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #700cb3;
+    color: white;
+    margin-top: 40px;
+    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+/* Tornando o site responsivo */
+@media (max-width: 768px) {
+    .nav-links {
+        flex-direction: column;
+        gap: 15px; /* Ajuste o espaçamento entre os links no mobile */
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    form {
+        padding: 20px;
+    }
 }
